@@ -234,31 +234,28 @@ public class Hello {
     }
 }
 */
-
-/* 반복문 두번째 문제
+/*
+반복문 두번째 문제
+*/
+/*
 import java.util.Scanner;
 public class Hello {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("반복할 만큼 첫째 줄에 숫자를 적어주세요. 두 정수를 입력하세요.");
-    while(input.hasNextInt()) {
         int k = input.nextInt();
+        int ary[] = new int[k];
 
-        for (int i = k; i > 0;){
+        for (int i = 0; i < k; i++){
             int a = input.nextInt();
             int b = input.nextInt();
-            if (a > 0 && b < 10){
-
-                System.out.println(a + b);
-
-        }break;
-
+            ary[i] = a + b;
         }
-
-
-
+       input.close();
+        for (int l : ary) {
+            System.out.println(l);
+        }
     }
-    }
+
 }
 */
 /*
@@ -283,7 +280,7 @@ public class Hello {
 백준 반복문 4번째 영수증문제
 밑의 문제는 나혼자 풀었는데 맞았다! 반복문에 자신감이 생겨가는 것 같으며
 뿌듯하다!
-*/
+
 import java.util.Scanner;
 
 public class Hello {
@@ -293,7 +290,7 @@ public class Hello {
         int kind = in.nextInt();
         int sum = 0;
 
-        for (int i = 1; i <= kind; i++) {
+        for (int i = 0; i < kind; i++) {
             int cheap = in.nextInt();
             int count = in.nextInt();
             sum += cheap * count;
@@ -306,7 +303,7 @@ public class Hello {
         }
     }
 }
- /*
+
 import java.util.Scanner;
 
 public class Hello {
@@ -321,3 +318,311 @@ public class Hello {
     }
 }
 */
+/*
+import java.util.Scanner;
+
+public class Hello{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+
+        if (n >= 4 && n <= 1000 && n % 4 == 0){
+            int k = n / 4;
+            for (int y = 0; y < k; y++){
+                System.out.println("long");
+
+
+
+            }
+            System.out.println("int");
+        }else {
+            System.out.println("잘 못 입력하였습니다.");
+        }
+    }
+}
+
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+public class Hello {
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int n = Integer.parseInt(br.readLine());
+
+        for (int i = 1; i <= n; i++) {
+
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            bw.write(a + b +"\n");
+
+        }
+        bw.flush();
+    }
+}
+
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello{
+    public static void main(String[] args)throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int n = Integer.parseInt(br.readLine());
+
+        for (int i = 1; i <= n; i++) {
+
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            bw.write("Case #" + i + ": ");
+            bw.write(  a + b +"\n");
+        }bw.flush();
+    }
+}
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello{
+    public static void main(String[] args) throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int T = Integer.parseInt(br.readLine());
+
+        for (int i = 1; i <= T; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            bw.write("Case " + "#" + i + ": ");
+            bw.write(a  + " + " +  b + " = " + (a + b) +"\n");
+        }bw.flush();
+    }
+}
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Hello{
+    public static void main(String[] args) throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int N = Integer.parseInt(br.readLine());
+        int k = N / 4;
+        for (int i = 0; i < k; i++) {
+            bw.write("long ");
+
+
+        }bw.write("int");
+        bw.flush();
+
+
+    }
+}
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello{
+    public static void main(String[] args) throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int N = Integer.parseInt(br.readLine());
+
+
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= i; j++) {
+                bw.write("*");
+            }bw.write(" " + "\n");
+
+
+
+        } bw.flush();
+
+    }
+}
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello{
+    public static void main(String[] args) throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int n = Integer.parseInt(br.readLine());
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            sum += i;
+
+        }bw.write(sum);
+        bw.flush();
+
+
+
+    }
+}
+*/
+/*
+import java.io.BufferedReader;
+        import java.io.BufferedWriter;
+        import java.io.IOException;
+        import java.io.InputStreamReader;
+        import java.io.OutputStreamWriter;
+        import java.util.StringTokenizer;
+
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int n = Integer.parseInt(br.readLine());
+        br.close();
+
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < n - i; j++){
+                bw.write(" ");
+
+            }
+            for (int k = 0; k <= i; k++) {
+                bw.write("*");
+            }bw.newLine();
+
+        }bw.flush();
+    }
+}
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+
+        while (true) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int n = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            if (n == 0 && b == 0) {
+                break;
+            }
+                bw.write((n + b) + "\n");
+            }
+            bw.flush();
+        }
+    }
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello{
+    public static void main(String[] args)throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int n = Integer.parseInt(br.readLine());
+        br.close();
+
+        for(int i = 0; i < n; i++){
+            for (int k = 0; k < n - i; k++){
+
+                bw.write(" ");
+
+            }for (int j = 0; j <= i; j++ ){
+
+                bw.write("*");
+
+            }bw.newLine();
+        }bw.flush();
+
+
+    }
+}
+*/
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String str;
+        StringTokenizer st;
+
+        while ((str = br.readLine()) != null){
+
+            st = new StringTokenizer(str, " ");
+
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            bw.write(Integer.toString(a+b) + "\n");
+        }bw.flush();
+    }
+}
+
