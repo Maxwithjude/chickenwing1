@@ -598,6 +598,7 @@ public class Hello{
     }
 }
 */
+/*
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -625,4 +626,67 @@ public class Hello {
         }bw.flush();
     }
 }
+*/
+/*자바 백준 배열문제
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int N = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int ary[] = new int[N];
+        int V = Integer.parseInt(br.readLine());
+        int count = 0;
+
+        for (int i = 0; i < N; i++) {
+            ary[i] = Integer.parseInt(st.nextToken());
+            if (ary[i] == V)
+                count += 1;
+        }
+            System.out.println(count);
+
+        }
+    }
+*/
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Hello{
+    public static void main(String[] args)throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        int N = Integer.parseInt(st.nextToken());
+        int X = Integer.parseInt(st.nextToken());
+
+        int arr[] = new int[N];
+        StringTokenizer num = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < N; i++){
+            arr[i] = Integer.parseInt(num.nextToken());
+            if(arr[i] < X){
+                bw.write(arr[i]+" ");
+            }bw.flush();
+        }
+
+
+    }
+}
