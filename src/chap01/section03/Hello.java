@@ -659,7 +659,7 @@ public class Hello {
         }
     }
 */
-import java.io.BufferedReader;
+/*import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -688,5 +688,97 @@ public class Hello{
         }
 
 
+    }
+}*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+import java.util.Arrays;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int N = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int arr[] = new int [N];
+
+        for (int i = 0; i < N; i++){
+            int num = Integer.parseInt(st.nextToken());
+            arr[i] = num;
+        }
+
+        Arrays.sort(arr);
+        bw.write(arr[0] + " " + arr[N-1]);
+        bw.flush();
+    }
+
+}
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int arr[] = new int[9];
+
+        int max = 0;
+        int maxindex = -1;
+
+        for (int i = 0; i < 9; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] > max) {
+                max = arr[i];
+                maxindex = i + 1;
+            }
+        }
+        System.out.println(max);
+        System.out.println(maxindex);
+
+    }
+}
+*/
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int arr[] = new int[N];
+
+        for(int z = 0; z < M; z++){
+            StringTokenizer st1 = new StringTokenizer(br.readLine(), " ");
+            int i = Integer.parseInt(st1.nextToken());
+            int j = Integer.parseInt(st1.nextToken());
+            int k = Integer.parseInt(st1.nextToken());
+            for (int y = i - 1; y < j; y++){
+                arr[y] = k;
+            }br.close();
+        }for (int t = 0; t < N; t++){
+            bw.write(arr[t] + " ");
+            bw.flush();
+        }
     }
 }
