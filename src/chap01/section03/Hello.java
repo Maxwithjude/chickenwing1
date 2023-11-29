@@ -752,6 +752,7 @@ public class Hello {
     }
 }
 */
+/*
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -773,12 +774,120 @@ public class Hello {
             int i = Integer.parseInt(st1.nextToken());
             int j = Integer.parseInt(st1.nextToken());
             int k = Integer.parseInt(st1.nextToken());
-            for (int y = i - 1; y < j; y++){
+            for (int y = i - 1; y < j; y++) {
                 arr[y] = k;
-            }br.close();
+            }
         }for (int t = 0; t < N; t++){
             bw.write(arr[t] + " ");
             bw.flush();
         }
+    }
+}
+*/
+/*
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int arr[] = new int[N];
+        for (int k = 0; k < N; k++) {
+            arr[k] = k + 1;
+        }
+        for (int z = 0; z < M; z++) {
+            StringTokenizer st1 = new StringTokenizer(br.readLine(), " ");
+            int i = Integer.parseInt(st1.nextToken());
+            int j = Integer.parseInt(st1.nextToken());
+            int c = arr[i - 1];
+
+            arr[i - 1] = arr[j-1];
+            arr[j - 1] = c;
+
+        }for (int q = 0; q < N; q++) {
+            bw.write(arr[q] + " ");
+            bw.flush();
+        }
+        }
+    }
+*/
+/*
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        boolean[] check = new boolean[31];
+        for (int i = 1; i < 29; i++){
+            int t = Integer.parseInt(br.readLine());
+            check [t] = true;
+
+        }
+        for (int i = 1; i <=30; i++){
+            if (!check[i]) {
+                System.out.println(i);
+            }
+        }
+
+
+    }
+}*/
+/*import java.util.List;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.ArrayList;
+public class Hello{
+    public static void main(String[] args)throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 1; i < 31; i++){
+            list.add(i);
+        }
+
+        for (int i = 1; i < 29; i++){
+            int k = Integer.parseInt(br.readLine());
+            list.remove(Integer.valueOf(k));
+        }
+        System.out.println(list.get(0));
+        System.out.println(list.get(1));
+
+
+
+    }
+}*/
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.HashSet;
+public class Hello {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+
+        HashSet<Integer> h = new HashSet<Integer>();
+
+        for (int i = 0; i < 10; i++){
+            h.add(Integer.parseInt(br.readLine()) % 42);
+        }
+        System.out.println(h.size());
     }
 }
