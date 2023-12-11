@@ -907,20 +907,26 @@ public class Hello{
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        ArrayList<Integer> al = new ArrayList<>();
+        int[] arr = new int[N];
+
+        for (int i = 0; i < N; i++){
+            arr[i] = i + 1;
+        }
 
         for (int o = 0; o < M; o++){
             StringTokenizer st1 = new StringTokenizer(br.readLine(), " ");
-            int i = Integer.parseInt(st1.nextToken());
-            int j = Integer.parseInt(st1.nextToken());
-            for (int q = i; q < j; q++) {
-
-                System.out.println(sb.reverse());
-                for (int k = 0; k < N; k++) {
-                    System.out.println(arr[k] + " ");
-                }
+            int i = Integer.parseInt(st1.nextToken()) - 1;
+            int j = Integer.parseInt(st1.nextToken()) - 1;
+            while (i < j) {
+                int k = arr[i];
+                arr[i++] = arr[j];
+                arr[j--] = k;
             }
         }
+        for (int q = 0; q < arr.length - 1; q++){
+            System.out.println(arr[q] + " ");
+        }
+        System.out.println(arr[arr.length -1]);
 
     }
 }
