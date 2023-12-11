@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7aa71efd-1faf-4d3b-8224-157f2256cc30" name="Changes" comment="2023-11-14" />
+    <list default="true" id="7aa71efd-1faf-4d3b-8224-157f2256cc30" name="Changes" comment="2023-11-14">
+      <change beforePath="$PROJECT_DIR$/src/chap01/section03/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap01/section03/Hello.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +38,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/inews&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/inews/hello.spring/build.gradle&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,7 +109,11 @@
       <workItem from="1699876721508" duration="10820000" />
       <workItem from="1699941980144" duration="33339000" />
       <workItem from="1700753540784" duration="4702000" />
-      <workItem from="1700760609477" duration="27930000" />
+      <workItem from="1700760609477" duration="30836000" />
+      <workItem from="1701338224649" duration="1755000" />
+      <workItem from="1701343021315" duration="1585000" />
+      <workItem from="1701367359803" duration="1247000" />
+      <workItem from="1702304484805" duration="1813000" />
     </task>
     <task id="LOCAL-00001" summary="2023-11-14">
       <option name="closed" value="true" />
@@ -149,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701269175280</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2023-11-14">
+      <option name="closed" value="true" />
+      <created>1702304686401</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702304686401</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
