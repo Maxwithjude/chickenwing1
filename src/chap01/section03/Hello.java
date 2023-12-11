@@ -2,7 +2,7 @@ package chap01.section03;
 
 import javax.swing.*;
 import java.time.Year;
-import java.util.Random;
+import java.util.*;
 
 /*
 public class Hello {
@@ -874,6 +874,7 @@ public class Hello{
 
     }
 }*/
+/*
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -889,5 +890,37 @@ public class Hello {
             h.add(Integer.parseInt(br.readLine()) % 42);
         }
         System.out.println(h.size());
+    }
+}*/
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+import java.util.ArrayList;
+public class Hello{
+    public static void main(String[] args)throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        ArrayList<Integer> al = new ArrayList<>();
+
+        for (int o = 0; o < M; o++){
+            StringTokenizer st1 = new StringTokenizer(br.readLine(), " ");
+            int i = Integer.parseInt(st1.nextToken());
+            int j = Integer.parseInt(st1.nextToken());
+            for (int q = i; q < j; q++) {
+
+                System.out.println(sb.reverse());
+                for (int k = 0; k < N; k++) {
+                    System.out.println(arr[k] + " ");
+                }
+            }
+        }
+
     }
 }
