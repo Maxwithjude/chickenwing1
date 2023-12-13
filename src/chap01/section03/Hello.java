@@ -1,6 +1,7 @@
 package chap01.section03;
 
 import javax.swing.*;
+import java.io.*;
 import java.time.Year;
 import java.util.*;
 
@@ -892,13 +893,13 @@ public class Hello {
         System.out.println(h.size());
     }
 }*/
+/*
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
-import java.util.ArrayList;
 public class Hello{
     public static void main(String[] args)throws IOException{
 
@@ -930,3 +931,34 @@ public class Hello{
 
     }
 }
+배열 마지막 문제
+*/
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+import java.util.Arrays;
+public class Hello{
+    public static void main(String[] args)throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        double arr[] = new double[Integer.parseInt(br.readLine())];
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        for (int i=0; i < arr.length; i++) {
+
+            arr[i] = Double.parseDouble(st.nextToken());
+        }
+        double max = 0;
+        Arrays.sort(arr);
+
+        for (int k = 0; k<arr.length; k++) {
+             max += arr[k] / arr[arr.length-1] * 100;
+        }
+        System.out.println(max / arr.length);
+        }
+
+}
+
+
