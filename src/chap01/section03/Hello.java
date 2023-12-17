@@ -933,7 +933,7 @@ public class Hello{
 }
 배열 마지막 문제
 */
-import java.io.BufferedReader;
+/*import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.StringTokenizer;
@@ -959,6 +959,77 @@ public class Hello{
         System.out.println(max / arr.length);
         }
 
+}*/
+/*import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+public class Hello{
+    public static void main(String[] args)throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s = br.readLine();
+        int i = Integer.parseInt(br.readLine());
+        System.out.println(s.substring(i-1, i));
+
+
+    }
+}*/
+/*
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Hello{
+    public static void main(String[] args)throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s = br.readLine();
+        System.out.println(s.length());
+    }
 }
+*/
+
+/*
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String arr[] = new String[Integer.parseInt(br.readLine())];
+        for (int i =0; i < arr.length; i++) {
+            String s = br.readLine();
+            arr[i] = s.substring(0,1) + s.substring(s.length()-1, s.length());
+        }
+        for (int k =0; k <arr.length; k++){
+            System.out.println(arr[k]);
+        }
+    }
+}
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+public class Hello {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        long a, b, c;
 
 
+         a = (st.nextToken());
+         b = long.parselong(st.nextToken());
+         c = long.parselong(st.nextToken());
+
+        System.out.println(a + b + c);
+    }
+}
+*/
+/*
+import java.io.IOException;
+
+ public class Hello{
+     public static void main(String[] args) throws IOException{
+         int a = System.in.read();
+         System.out.println(a);
+     }
+ }*/
