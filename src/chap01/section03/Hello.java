@@ -1051,6 +1051,7 @@ public class Hello {
         System.out.println(sum);
     }
 }*/
+/*
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -1058,7 +1059,51 @@ import java.io.IOException;
 public class Hello {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int[] arr= new int[26];
+
+        for (int i =0; i < arr.length; i++){
+            arr[i] = -1;
+        }
         String str = br.readLine();
+
+        for (int i =0; i < str.length(); i++){
+            char ch = str.charAt(i);
+
+            if (arr[ch - 'a'] == -1){
+                arr[ch - 'a'] = i;
+            }
+        }
+        for (int val : arr){
+            System.out.println(val + " ");
+        }
+
+
+    }
+}*/
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.StringTokenizer;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        for (int i = 0; i < T; i++){
+        int R = Integer.parseInt(st.nextToken());
+        String s = st.nextToken();
+
+        StringTokenizer st1 = new StringTokenizer(br.readLine());
+        String arr[] = new String[s.length()];
+        for (int k = 0; k < R; k++){
+            System.out.println(arr[k]);
+        }
+
+        }
+        }
+
 
 
     }
