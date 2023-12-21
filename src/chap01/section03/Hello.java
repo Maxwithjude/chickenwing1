@@ -1081,6 +1081,34 @@ public class Hello {
 
     }
 }*/
+/*
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+
+        int T = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i< T; i++) {
+
+            String[] str = br.readLine().split(" ");
+            int R = Integer.parseInt(str[0]);
+
+            for (byte val : str[1].getBytes()){
+                for (int j = 0; j <R; j++){
+                    sb.append((char)val);
+                }
+            }
+            sb.append('\n');
+        }
+        System.out.println(sb);
+    }
+}*/
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -1089,21 +1117,10 @@ import java.util.StringTokenizer;
 public class Hello {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine());
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        for (int i = 0; i < T; i++){
-        int R = Integer.parseInt(st.nextToken());
-        String s = st.nextToken();
 
-        StringTokenizer st1 = new StringTokenizer(br.readLine());
-        String arr[] = new String[s.length()];
-        for (int k = 0; k < R; k++){
-            System.out.println(arr[k]);
-        }
-
-        }
-        }
-
+            String str = br.readLine();
+            StringTokenizer st = new StringTokenizer(str, " ");
+        System.out.println(st.countTokens());
 
 
     }
