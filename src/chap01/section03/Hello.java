@@ -1223,6 +1223,7 @@ public class Hello {
         }
     }
 }*/
+/*
 public class Hello {
     public static void main(String[] args){
         System.out.println("         ,r'\"7\n"
@@ -1234,4 +1235,88 @@ public class Hello {
 
     }
 }
+*/
 
+/*
+import java.util.StringTokenizer;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Hello{
+    public static void main(String [] args)throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int king = 1;
+        int queen = 1;
+        int rook = 2;
+        int bishop = 2;
+        int knight = 2;
+        int pawn = 8;
+
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        king = king - Integer.parseInt(st.nextToken());
+        queen = queen - Integer.parseInt(st.nextToken());
+        rook = rook - Integer.parseInt(st.nextToken());
+        bishop = bishop - Integer.parseInt(st.nextToken());
+        knight = knight - Integer.parseInt(st.nextToken());
+        pawn = pawn - Integer.parseInt(st.nextToken());
+
+        System.out.println(king + " ");
+        System.out.println(queen + " ");
+        System.out.println(rook + " ");
+        System.out.println(bishop + " ");
+        System.out.println(knight + " ");
+        System.out.println(pawn + " ");
+
+    }
+}
+
+
+import java.util.StringTokenizer;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+
+
+    }
+}
+*/
+import java.io.IOException;
+        import java.io.BufferedReader;
+        import java.io.InputStreamReader;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        String[] word = new String[n];
+        int num = n;
+
+        for (int i =0; i<n; i++){
+            word[i]=br.readLine();
+            boolean[] alp=new boolean[26];
+
+            for (int j = 1; j<word[i].length(); j++){
+                if (word[i].charAt(j)!=word[i].charAt(j-1)){
+                    if (alp[word[i].charAt(j)-'a']){
+                        num--;
+                        break;
+                    }
+                    alp[word[i].charAt(j-1)-'a']=true;
+                }
+            }
+        }
+        System.out.println(num);
+        br.close();
+
+    }
+}
