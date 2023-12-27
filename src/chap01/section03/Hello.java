@@ -1276,7 +1276,7 @@ public class Hello{
 }
 
 */
-import java.io.IOException;
+/*import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.BufferedWriter;
@@ -1293,8 +1293,33 @@ public class Hello {
             int abs = Math.abs(n - i);
             bw.write(" ".repeat(abs) + "*".repeat((n - abs) * 2 -1) + "\n");
         }bw.flush();
+    }
+}*/
+import java.util.Stack;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
+public class Hello{
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String text = br.readLine();
+        Stack<Character> s = new Stack<Character>();
+
+        for (int i =0; i<text.length(); i++) {
+            s.push(text.charAt(i));
+        }
+        String text2 = "";
+
+        while (s.size() > 0){
+            text2 += s.pop();
+        }
+        if (text.equals(text2)){
+            System.out.println(1);
+        }else {
+            System.out.println(0);
+        }
 
     }
 }
-
