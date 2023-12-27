@@ -1,5 +1,7 @@
 package chap01.section03;
 
+import org.w3c.dom.*;
+
 import javax.swing.*;
 import java.io.*;
 import java.time.Year;
@@ -1273,50 +1275,26 @@ public class Hello{
     }
 }
 
-
-import java.util.StringTokenizer;
+*/
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
 
 public class Hello {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int n = Integer.parseInt(br.readLine());
-
-
-    }
-}
-*/
-import java.io.IOException;
-        import java.io.BufferedReader;
-        import java.io.InputStreamReader;
-
-public class Hello {
-    public static void main(String[] args) throws IOException {
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        String[] word = new String[n];
-        int num = n;
-
-        for (int i =0; i<n; i++){
-            word[i]=br.readLine();
-            boolean[] alp=new boolean[26];
-
-            for (int j = 1; j<word[i].length(); j++){
-                if (word[i].charAt(j)!=word[i].charAt(j-1)){
-                    if (alp[word[i].charAt(j)-'a']){
-                        num--;
-                        break;
-                    }
-                    alp[word[i].charAt(j-1)-'a']=true;
-                }
-            }
-        }
-        System.out.println(num);
         br.close();
+        for (int i = 1; i < n*2; i++){
+            int abs = Math.abs(n - i);
+            bw.write(" ".repeat(abs) + "*".repeat((n - abs) * 2 -1) + "\n");
+        }bw.flush();
+
 
     }
 }
+
