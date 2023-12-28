@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7aa71efd-1faf-4d3b-8224-157f2256cc30" name="Changes" comment="2023-11-14">
       <change beforePath="$PROJECT_DIR$/src/chap01/section03/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap01/section03/Hello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chap01/section03/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap01/section03/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +116,7 @@
       <workItem from="1701367359803" duration="1247000" />
       <workItem from="1702304484805" duration="23019000" />
       <workItem from="1702461762286" duration="41068000" />
-      <workItem from="1703492339514" duration="26831000" />
+      <workItem from="1703492339514" duration="30798000" />
     </task>
     <task id="LOCAL-00001" summary="2023-11-14">
       <option name="closed" value="true" />
