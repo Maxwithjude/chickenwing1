@@ -1341,6 +1341,7 @@ public class Hello {
         }
     }
 }*/
+/*
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -1371,5 +1372,28 @@ public class Hello {
         }
         System.out.println(answer);
         br.close();
+    }
+}
+
+*/
+
+import java.io.IOException;
+        import java.io.BufferedReader;
+        import java.io.InputStreamReader;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String a = br.readLine();
+        String str[] = {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
+
+        for (int i =0; i<str.length; i++){
+            if (a.contains(str[i])){
+                a = a.replace(str[i], "!");
+            }
+        }
+        System.out.println(a.length());
+
     }
 }
