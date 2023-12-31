@@ -1400,7 +1400,7 @@ public class Hello {
 }
 */
 
-import java.io.IOException;
+/*import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -1428,6 +1428,90 @@ public class Hello {
         }
         System.out.println(num);
         br.close();
+
+    }
+}*/
+
+/*
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        Double result = 0.0;
+        Double arr[][] = new Double[20][2];
+        Double total = 0.0;
+
+        for (int i = 0; i<20; i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            String str = st.nextToken();
+            arr[i][0] = Double.parseDouble(st.nextToken());
+            String ch = st.nextToken();
+
+            switch (ch.charAt(0)){
+                case 'A' :
+                    arr[i][1] = 4.0;
+                    break;
+                case 'B' :
+                    arr[i][1]= 3.0;
+                    break;
+                case 'C' :
+                    arr[i][1] = 2.0;
+                    break;
+                case 'D' :
+                    arr[i][1]=1.0;
+                    break;
+                case 'F' :
+                    arr[i][1]=0.0;
+                case 'P' :
+                    continue;
+            }
+
+            if (ch.charAt(0)!='F')
+                if (ch.charAt(1)=='+')
+                    arr[i][1]+=0.5;
+
+            total+=arr[i][0];
+            result+=arr[i][0]*arr[i][1];
+        }
+        System.out.println(result/=total);
+    }
+}*/
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine()," ");
+        StringBuilder sb = new StringBuilder();
+
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+
+        int[][] arr = new int[N][M];
+
+        for (int i = 0; i< N ; i++){
+            st = new StringTokenizer(br.readLine()," ");
+            for (int j = 0; j < M; j++)
+                arr[i][j] = Integer.parseInt(st.nextToken());
+        }
+
+        for (int i = 0; i <N; i++){
+            st = new StringTokenizer(br.readLine(), " ");
+            for (int j =0; j < M; j++)
+                sb.append(arr[i][j]+Integer.parseInt(st.nextToken())).append(" ");
+            sb.append("\n");
+        }
+        System.out.println(sb);
 
     }
 }
