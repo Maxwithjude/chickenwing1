@@ -1482,6 +1482,7 @@ public class Hello {
         System.out.println(result/=total);
     }
 }*/
+/*
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -1512,6 +1513,69 @@ public class Hello {
             sb.append("\n");
         }
         System.out.println(sb);
+
+    }
+}
+*/
+/*import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        int [][]arr = new int[9][9];
+        int max,x,y = 0;
+
+        for (int i =0; i < 9; i++){
+
+            for (int j = 0; j < 9; j++){
+                arr[i][j] = Integer.parseInt(st.nextToken());
+
+                if (arr[i][j] > max){
+                    max = arr[i][j];
+                    x = i;
+                    y = j;
+                }
+            }
+            System.out.println(max);
+            System.out.println((x+1) + " " + (y+1));
+        }
+
+    }
+}*/
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+import java.lang.String;
+
+public class Hello {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        String N = st.nextToken();
+
+        StringBuilder sb = new StringBuilder(N);
+        N = sb.reverse().toString();
+
+        int B = Integer.parseInt(st.nextToken());
+        int n;
+        int sum = 0;
+
+        for (int i =0; i < N.length(); i++){
+            if (N.charAt(i) >= 'A' && N.charAt(i) <= 'Z')
+                n = N.charAt(i) - 55;
+            else
+                n = N.charAt(i) - '0';
+            sum += (n * Math.pow(B,i));
+        }
+
+        System.out.println(sum);
 
     }
 }
