@@ -1517,7 +1517,9 @@ public class Hello {
     }
 }
 */
-/*import java.io.IOException;
+
+/*
+import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -1526,56 +1528,86 @@ public class Hello {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringTokenizer token;
         int [][]arr = new int[9][9];
-        int max,x,y = 0;
+
 
         for (int i =0; i < 9; i++){
+            token = new StringTokenizer(br.readLine());
 
             for (int j = 0; j < 9; j++){
-                arr[i][j] = Integer.parseInt(st.nextToken());
+                arr[i][j] = Integer.parseInt(token.nextToken());
+                  }
+            }
+        br.close();
 
-                if (arr[i][j] > max){
+        int max = 0;
+        int x = 0;
+        int y = 0;
+
+        for (int i = 0; i < 9; i++){
+            for (int j = 0; j < 9; j++){
+                if (max < arr[i][j]){
                     max = arr[i][j];
                     x = i;
                     y = j;
                 }
             }
-            System.out.println(max);
-            System.out.println((x+1) + " " + (y+1));
         }
-
+        System.out.println(max + "\n" + (x+1) + " " + (y+1) + " ");
     }
 }*/
+/*
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.lang.String;
-
 public class Hello {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        String N = st.nextToken();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        String [][]arr = new String[5][15];
 
-        StringBuilder sb = new StringBuilder(N);
-        N = sb.reverse().toString();
+        for (int i =0; i < 5; i++){
 
-        int B = Integer.parseInt(st.nextToken());
-        int n;
-        int sum = 0;
-
-        for (int i =0; i < N.length(); i++){
-            if (N.charAt(i) >= 'A' && N.charAt(i) <= 'Z')
-                n = N.charAt(i) - 55;
-            else
-                n = N.charAt(i) - '0';
-            sum += (n * Math.pow(B,i));
         }
 
-        System.out.println(sum);
 
+    }
+}*/
+
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Hello{
+    public static void main(String[] args) throws IOException {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String str = br.readLine();
+        String[] arr = str.split(" ");
+
+        int number = Integer.parseInt(arr[0]), su = Integer.parseInt(arr[1]);
+
+        String answer = "";
+
+        while (number != 0){
+            int remainder = number % su;
+
+            if (remainder < 10){
+                answer += remainder;
+            }
+
+            else {
+                answer += (char)(remainder + 55);
+            }
+            number /= su;
+        }
+
+        StringBuffer stringBuffer = new StringBuffer(answer);
+
+        System.out.println(stringBuffer.reverse().toString());
     }
 }
