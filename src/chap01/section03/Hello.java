@@ -1557,82 +1557,36 @@ public class Hello {
         System.out.println(max + "\n" + (x+1) + " " + (y+1) + " ");
     }
 }*/
-/*
+
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-import java.lang.String;
+
 public class Hello {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        String [][]arr = new String[5][15];
+
+        char [][]ch = new char[5][15];
+        int max = 0;
 
         for (int i =0; i < 5; i++){
+            String str = br.readLine();
+            if (max < str.length()) max = str.length();
 
-        }
-
-
-    }
-}*/
-
-/*
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-public class Hello{
-    public static void main(String[] args) throws IOException {
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        String str = br.readLine();
-        String[] arr = str.split(" ");
-
-        int number = Integer.parseInt(arr[0]), su = Integer.parseInt(arr[1]);
-
-        String answer = "";
-
-        while (number != 0){
-            int remainder = number % su;
-
-            if (remainder < 10){
-                answer += remainder;
+            for (int j =0; j < str.length(); j++){
+                ch[i][j] = str.charAt(j);
             }
-
-            else {
-                answer += (char)(remainder + 55);
-            }
-            number /= su;
         }
-
-        StringBuffer stringBuffer = new StringBuffer(answer);
-
-        System.out.println(stringBuffer.reverse().toString());
-    }
-}*/
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class Hello{
-    public static void main(String[] args)throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int n = Integer.parseInt(br.readLine());
-        int unit[] = {25, 10, 5, 1};
-        int result[][] = new int[n][4];
-
-        for (int i =0; i < n; i++){
-            int input = Integer.parseInt(br.readLine());
-            for (int j = 0; j < 4; j++){
-                result[i][j] = input / unit[j];
-                sb.append(result[i][j]).append(" ");
-                input %= unit[j];
+        for (int i=0; i< max; i++){
+            for (int j =0; j < 5; j++){
+                if (ch[j][i] == '\0') continue;
+                sb.append(ch[j][i]);
             }
-            sb.append("\n");
+
         }
         System.out.println(sb);
     }
 }
+
