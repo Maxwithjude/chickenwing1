@@ -5,3 +5,4 @@ greet 인사하다
 complimentary 무료의
 demolish 철거하다
 monument 기념물
+admire 감탄하다
