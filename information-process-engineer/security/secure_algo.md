@@ -7,3 +7,5 @@ HAS-160 국내 표준 서명 알고리즘 을 위해 개발된 해시 함수
 내용 공통 외부 제어 스탬프 자료결합도
 
 hrn 대기시간 + 서비스시간 ) / 서비스시간
+
+acid 특성 atomic, consistency, isolation ,durability
