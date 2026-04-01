@@ -18,7 +18,20 @@ U - 합집합을 구하되 중복되는 튜플은 제거
 원부이결다조 ACID ATOMIC CONSISTENCY ISOLATION DURABILITY
 REDO - START, COMMIT 있는 트랜잭션 작업을 재작업
 UNDO - START는 있지만 COMMIT이 없는 작업 취소
+외공내제스자 외부 공통 내부 제어 스탬프 자료
 
 ## 이상 현상
 
 1. 삽입 2. 삭제 3. 갱신
+
+## EAI
+
+- point to point
+- hub & spoke
+- message bus
+- hybrid
+
+## ui
+
+- 아이콘 - GUI
+- 자연스러운 움직임 - NUI
