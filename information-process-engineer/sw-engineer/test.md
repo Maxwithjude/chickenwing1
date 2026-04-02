@@ -40,3 +40,12 @@ regression - 반복 테스트
 
 - 사회공학 = 깊은 신뢰를 이용해 비기술적 시스템 침입 수단
 - 다크 데이터 - 활용 X 저장만 되어 있는 대량의 데이터
+
+## SQL
+
+CREATE INDEX idx_name ON student(name);
+SELECT name, score FROM 성적 ORDER BY 점수 DESC;
+SELECT _ FROM 회원 WHERE 이름 LIKE '이%' ORDER BY 가입일 DESC;
+SELECT 학과, COUNT(_) AS 학과별튜플수 FROM 학생 GROUP BY 학과
+SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름
+HAVING AVG(점수) >= 90;
