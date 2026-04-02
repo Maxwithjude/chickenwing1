@@ -43,9 +43,11 @@ regression - 반복 테스트
 
 ## SQL
 
-CREATE INDEX idx_name ON student(name);
+CREATE INDEX idx*name ON student(name);
 SELECT name, score FROM 성적 ORDER BY 점수 DESC;
-SELECT _ FROM 회원 WHERE 이름 LIKE '이%' ORDER BY 가입일 DESC;
-SELECT 학과, COUNT(_) AS 학과별튜플수 FROM 학생 GROUP BY 학과
+SELECT * FROM 회원 WHERE 이름 LIKE '이%' ORDER BY 가입일 DESC;
+SELECT 학과, COUNT(\_) AS 학과별튜플수 FROM 학생 GROUP BY 학과
 SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수 FROM 성적 GROUP BY 과목이름
 HAVING AVG(점수) >= 90;
+
+arp - ip -> max rarp mac -> ip
